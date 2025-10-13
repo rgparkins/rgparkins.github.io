@@ -1,0 +1,16 @@
+title: "Richard Parkins Blog"
+description: "Technology, Leadership, and Cloud Architecture"
+baseurl: "" # leave blank for GitHub Pages root
+url: "https://rgparkins.github.io"
+author:
+  name: "Richard Parkins"
+  email: "rgparkins@hotmail.com"
+
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+paginate: 5
+paginate_path: "/page:num"

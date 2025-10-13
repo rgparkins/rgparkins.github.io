@@ -1,0 +1,44 @@
+---
+# Front matter so Jekyll processes SCSS
+---
+
+@import "minima";
+
+body {
+  font-family: "Georgia", serif;
+  background: #fafafa;
+  color: #222;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.site-header {
+  text-align: center;
+  padding: 2rem;
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.site-header a {
+  color: #000;
+  text-decoration: none;
+}
+
+.content {
+  max-width: 740px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.post h1 {
+  font-size: 2.2rem;
+}
+
+.post-meta {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+a {
+  color: #1a8917;
+}
