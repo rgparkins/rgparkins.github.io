@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Why Cloud Architecture Still Matters"
+tags: [Azure, Cloud, Architecture, DevOps]
 ---
 
 The cloud has levelled the playing field — but architecture is what separates *good* systems from *great* ones.

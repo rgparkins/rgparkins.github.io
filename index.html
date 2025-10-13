@@ -34,6 +34,16 @@ paginate: true
             <p class="card-text text-muted small mb-2">{{ post.date | date: "%B %d, %Y" }}</p>
             <p class="card-text">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
             <a href="{{ post.url | relative_url }}" class="btn btn-success btn-sm">Read More</a>
+            {% if post.tags %}
+            <p class="mt-2">
+              {% for tag in post.tags %}
+                <a href="{{ '/tags/#' | append: tag | relative_url }}" 
+                  class="badge bg-success text-decoration-none me-1">
+                  {{ tag }}
+                </a>
+              {% endfor %}
+            </p>
+          {% endif %}
           </div>
         </div>
       {% endfor %}

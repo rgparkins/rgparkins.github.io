@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Welcome to My Blog"
+tags: [Welcome, Software, Architecture]
 ---
 
 Welcome! 👋  
