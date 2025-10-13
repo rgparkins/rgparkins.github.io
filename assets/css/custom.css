@@ -1,0 +1,23 @@
+/* Talent Consulting Bootstrap Overrides */
+
+/* Override header (hero bar) background */
+header.bg-success {
+  background: linear-gradient(135deg, #031665 0%, #031665 100%) !important;
+  color: #fff !important;
+}
+
+/* Optional: text color tweak */
+header.bg-success h1,
+header.bg-success p {
+  color: #ffffff !important;
+}
+
+/* Buttons to match header green */
+.btn-success {
+  background-color: #031665 !important;
+  border-color: #031665 !important;
+}
+.btn-success:hover {
+  background-color: #031665 !important;
+  border-color: #031665 !important;
+}
