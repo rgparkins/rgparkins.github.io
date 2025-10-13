@@ -1,0 +1,59 @@
+---
+layout: default
+title: Home
+paginate: true
+---
+
+<div class="row">
+  <!-- Sidebar -->
+  <aside class="col-md-3 mb-4">
+    <div class="list-group shadow-sm">
+      <h5 class="px-3 pt-2 fw-bold border-bottom pb-2">Posts by Year</h5>
+      {% assign years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+      {% for year in years %}
+        <a href="#year-{{ year.name }}" class="list-group-item list-group-item-action">
+          {{ year.name }}
+        </a>
+      {% endfor %}
+    </div>
+  </aside>
+  
+
+  <!-- Main Content -->
+  <div class="col-md-9">
+    {% assign years = paginator.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+    {% for year in years %}
+      <h2 id="year-{{ year.name }}" class="border-bottom pb-2 mt-5 mb-3">{{ year.name }}</h2>
+
+      {% for post in year.items %}
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <h3 class="card-title">
+              <a href="{{ post.url | relative_url }}" class="text-decoration-none text-dark">{{ post.title }}</a>
+            </h3>
+            <p class="card-text text-muted small mb-2">{{ post.date | date: "%B %d, %Y" }}</p>
+            <p class="card-text">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+            <a href="{{ post.url | relative_url }}" class="btn btn-success btn-sm">Read More</a>
+          </div>
+        </div>
+      {% endfor %}
+    {% endfor %}
+
+    <!-- Pagination Controls -->
+    <nav aria-label="Page navigation">
+      <ul class="pagination justify-content-center">
+        {% if paginator.previous_page %}
+          <li class="page-item">
+            <a class="page-link" href="{{ paginator.previous_page_path | relative_url }}" aria-label="Previous">« Previous</a>
+          </li>
+        {% endif %}
+
+        {% if paginator.next_page %}
+          <li class="page-item">
+            <a class="page-link" href="{{ paginator.next_page_path | relative_url }}" aria-label="Next">Next »</a>
+          </li>
+        {% endif %}
+      </ul>
+    </nav>
+  </div>
+</div>

@@ -21,3 +21,10 @@ header.bg-success p {
   background-color: #031665 !important;
   border-color: #031665 !important;
 }
+
+@media (min-width: 768px) {
+  aside {
+    position: sticky;
+    top: 100px;
+  }
+}
